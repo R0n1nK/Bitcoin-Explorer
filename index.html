@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <title>Bitcoin Explorer</title>
+</head>
+
+<body>
+    <div class="bg-dark bg-gradient ">
+        <nav class="navbar navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand">Bitcoin Explorer</a>
+                <img src="https://icons.iconarchive.com/icons/cjdowner/cryptocurrency-flat/1024/Bitcoin-BTC-icon.png"
+                    id="btcImg">
+            </div>
+        </nav>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <ul class="nav nav-tabs card-header-tabs" id="cardList" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#address" role="tab" aria-controls="address"
+                                        aria-selected="true">Address</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#transaction" role="tab" aria-controls="transaction"
+                                        aria-selected="false">Transaction</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#block" role="tab" aria-controls="block"
+                                        aria-selected="false">Block</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card-body">
+                            <div class="tab-content mt-0.5">
+                                <div class="tab-pane active" id="address" role="tabpanel">
+                                    <form class="d-flex">
+                                        <input class="form-control me-2" placeholder="Address..." aria-label="Search"
+                                            id="addressInput">
+                                        <button class="btn btn-outline-dark" type="button" id="addrBtn">Search</button>
+                                    </form>
+                                </div>
+
+                                <div class="tab-pane" id="transaction" role="tabpanel"
+                                    aria-labelledby="transaction-tab">
+                                    <form class="d-flex">
+                                        <input class="form-control me-2" placeholder="Transaction..."
+                                            aria-label="Search" id="transactionInput">
+                                        <button class="btn btn-outline-dark" type="button" id="txBtn">Search</button>
+                                    </form>
+                                </div>
+
+                                <div class="tab-pane" id="block" role="tabpanel" aria-labelledby="block-tab">
+                                    <form class="d-flex">
+                                        <input class="form-control me-2" placeholder="Block..." aria-label="Search"
+                                            id="blockInput">
+                                        <button class="btn btn-outline-dark" type="button" id="blockBtn">Search</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card" id="outputDivAddress" style="display: none;">
+                <div class="card-body">
+                    <p id="address_paragraph"></p>
+                    <p id="tx_paragraph"></p>
+                    <p id="total_received_paragraph"></p>
+                    <p id="total_sent_paragraph"></p>
+                    <p id="balance_paragraph"></p>
+                </div>
+            </div>
+            <div class="card" id="outputDivTx" style="display: none;">
+                <div class="card-body">
+                    <p id="prev_addresses"></p>
+                    <p id="addresses"></p>
+                    <p id="status"></p>
+                    <p id="block_time"></p>
+                    <p id="confirmations"></p>
+                    <p id="fee"></p>
+                    <p id="inputs_value"></p>
+                    <p id="outputs_value"></p>
+                    <p id="hash"></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

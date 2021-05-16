@@ -1,0 +1,31 @@
+.bg-dark.bg-gradient {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    margin-left: 0%;
+}
+
+#btcImg {
+    width: 2.5%;
+    height: 2.5%;
+}
+
+#cardList {
+    justify-content: center;
+}
+
+.card {
+    width: fit-content;
+    margin: 0 auto;
+    float: none;
+    margin-top: 5%;
+}
+
+.nav-link {
+    color: #212529;
+}
+
+#outputDiv {
+    background-color: #212529;
+    color: white;
+}
