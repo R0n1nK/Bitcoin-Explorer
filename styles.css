@@ -1,8 +1,8 @@
-.bg-dark.bg-gradient {
-    height: 100%;
+.bg-dark {
+    height: 55px;
     width: 100%;
-    position: fixed;
     margin-left: 0%;
+    background-color: #2d333b !important;
 }
 
 #btcImg {
@@ -19,13 +19,35 @@
     margin: 0 auto;
     float: none;
     margin-top: 5%;
+    background-color: #22272e;
+    border-color: #444d56;
+    color: white;
 }
 
 .nav-link {
-    color: #212529;
+    color: #539bf5;
 }
 
-#outputDiv {
-    background-color: #212529;
-    color: white;
+html {
+    background-color: #1e2228;
+}
+
+input {
+    background-color: #1e2228 !important;
+    color: white !important;
+}
+
+button {
+    background-color: #1e2228 !important;
+    color: #539bf5 !important;
+}
+
+.form-control:focus {
+    border-color: #539bf5;
+    box-shadow: none;
+}
+
+.nav-link.active{
+    background-color: #444d56 !important;
+    color: white !important;
 }
