@@ -25,7 +25,7 @@ addressBtn.addEventListener("click", function () {
     if (addressInput.value.length == 0) {
     }
     else {
-        $.getJSON('https://chain.api.btc.com/v3/address/' + addressInput.value, function (data) {
+        $.getJSON('https://bitcoin-explorer.onrender.com/https://chain.api.btc.com/v3/address/' + addressInput.value, function (data) {
             let address = data.data.address;
             let balance = data.data.balance / 100000000;
             let received = data.data.received / 100000000;
@@ -49,7 +49,7 @@ txBtn.addEventListener("click", function () {
     if (transactionInput.value.length == 0) {
     }
     else {
-        $.getJSON('https://chain.api.btc.com/v3/tx/' + transactionInput.value, function (data) {
+        $.getJSON('https://bitcoin-explorer.onrender.com/https://chain.api.btc.com/v3/tx/' + transactionInput.value, function (data) {
             let block_height = data.data.block_height;
             let block_time = data.data.block_time;
             let confirmations = data.data.confirmations;
@@ -93,7 +93,7 @@ blockBtn.addEventListener("click", function () {
     if (blockInput.value.length == 0) {
     }
     else {
-        $.getJSON('https://chain.api.btc.com/v3/block/' + blockInput.value, function (data) {
+        $.getJSON('https://bitcoin-explorer.onrender.com/https://chain.api.btc.com/v3/block/' + blockInput.value, function (data) {
             let timestamp = data.data.timestamp;
             let hash = data.data.hash;
             let height = data.data.height;
